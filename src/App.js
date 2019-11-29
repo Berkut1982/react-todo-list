@@ -64,7 +64,6 @@ class App extends Component {
               handleEdit={this.handleEdit}
             />
           </div>
-          <h1>statta</h1>
         </div>
       </div>
     );
