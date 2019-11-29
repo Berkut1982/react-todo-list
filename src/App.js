@@ -3,7 +3,6 @@ import uuid from "uuid";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
-
 // showing vs-code github setup
 class App extends Component {
   state = {
@@ -12,7 +11,6 @@ class App extends Component {
     item: "",
     editItem: false
   };
-
   handleChange = e => {
     this.setState({
       item: e.target.value
@@ -26,26 +24,26 @@ class App extends Component {
     };
     const updatedItems = [...this.state.items, newItem];
 
-    this.setState({
-      items: updatedItems,
-      item: "",
-      id: uuid(),
-      editItem: false
-    });
+    this.setState(
+      {
+        items: updatedItems,
+        item: "",
+        id: uuid(),
+        editItem: false
+      },
+      () => console.log(this.state)
+    );
   };
-
   clearList = () => {
-    console.log("clear list");
+    console.log("clear list ");
   };
   handleDelete = id => {
-    console.log(`handle delete ${id}`);
-  };
-  handleEdit = id => {
     console.log(`handle edit ${id}`);
   };
-
+  handleEdit = id => {
+    console.log(`edit edit ${id}`);
+  };
   render() {
-    console.log(this.state);
     return (
       <div className="container">
         <div className="row">
@@ -54,7 +52,7 @@ class App extends Component {
             <TodoInput
               item={this.state.item}
               handleChange={this.handleChange}
-              handleSubmit={this.state.handleSubmit}
+              handleSubmit={this.handleSubmit}
               editItem={this.state.editItem}
             />
             <TodoList
@@ -69,4 +67,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

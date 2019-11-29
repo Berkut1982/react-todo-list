@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class TodoInput extends Component {
+export default class TodoInput extends Component {
   render() {
     const { item, handleChange, handleSubmit, editItem } = this.props;
     return (
@@ -9,7 +9,7 @@ class TodoInput extends Component {
           <div className="input-group">
             <div className="input-group-prepend">
               <div className="input-group-text bg-primary text-white">
-                <i className="fas fa-book"></i>
+                <i className="fas fa-book" />
               </div>
             </div>
             <input
@@ -31,4 +31,3 @@ class TodoInput extends Component {
     );
   }
 }
-export default TodoInput;

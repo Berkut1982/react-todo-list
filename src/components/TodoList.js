@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Item from "./TodoItem";
-
-class TodoList extends Component {
+export default class TodoList extends Component {
   render() {
     return (
       <section>
@@ -11,5 +10,3 @@ class TodoList extends Component {
     );
   }
 }
-
-export default TodoList;
