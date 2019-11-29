@@ -45,7 +45,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div className="container">
         <div className="row">
@@ -64,6 +64,7 @@ class App extends Component {
               handleEdit={this.handleEdit}
             />
           </div>
+          <h1>statta</h1>
         </div>
       </div>
     );
